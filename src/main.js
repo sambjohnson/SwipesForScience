@@ -2,7 +2,7 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import { createApp } from "vue";
 import { initializeApp } from "firebase/app";
-import { getDatabase, connectDatabaseEmulator } from "firebase/database";
+import { connectDatabaseEmulator } from "firebase/database";
 import {
   getAuth,
   onAuthStateChanged,
@@ -12,8 +12,9 @@ import defineValidationRules from "./validation-rules";
 import App from "./App";
 import router from "./router";
 import appConfig from "./config";
-import imageswipeTestConfig from "./example.imageswipe-test.config";
-import wordswipeTestConfig from "./example.wordswipe-test.config";
+import { db } from "./config/firebaseConfig";
+// import imageswipeTestConfig from "./example.imageswipe-test.config";
+// import wordswipeTestConfig from "./example.wordswipe-test.config";
 let app;
 
 // we have to to initialize the app w/ existing config keys here.
@@ -27,17 +28,15 @@ This will make sure Firebase initializes before loading the app when a user refr
 
 let config = appConfig;
 // Sample setup for ImageSwipe and WordSwipe for development for testing only. Will be removed when testing is done
-if (process.env.VUE_APP_PROJECT_ID === "imageswipe-test") {
-  config = imageswipeTestConfig;
-}
-if (process.env.VUE_APP_PROJECT_ID === "wordswipe-test") {
-  config = wordswipeTestConfig;
-}
+// if (process.env.VUE_APP_PROJECT_ID === "imageswipe-test") {
+//  config = imageswipeTestConfig;
+// }
+// if (process.env.VUE_APP_PROJECT_ID === "wordswipe-test") {
+//  config = wordswipeTestConfig;
+// }
 
 initializeApp(config.firebaseKeys);
-
 const auth = getAuth();
-const db = getDatabase();
 if (process.env.NODE_ENV === "development") {
   connectAuthEmulator(auth, "http://localhost:9099");
   connectDatabaseEmulator(db, "localhost", 9000);

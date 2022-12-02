@@ -37,7 +37,8 @@ import Navigation from "@/components/Navigation";
 import gsap from "gsap";
 
 import firebase from "firebase/compat/app";
-import { getDatabase, ref, update, onValue } from "firebase/database";
+import { ref, update, onValue } from "firebase/database";
+import { db } from "@/config/firebaseConfig";
 import { getAuth, signOut, onAuthStateChanged } from "firebase/auth";
 
 // Animate on scroll, for the tutorial
@@ -79,7 +80,7 @@ export default {
       /**
        * This is the firebase database object.
        */
-      db: getDatabase(),
+      db: db,
       /**
        * This is the config object, it defines the look of the app
        */
@@ -119,7 +120,7 @@ export default {
       // if there is a user, subscribe to changes in userData
       if (user) {
         this.unsubscribeUser = onValue(
-          ref(getDatabase(), "users/" + user.uid),
+          ref(db, "users/" + user.uid),
           snapshot => {
             if (snapshot.exists()) {
               this.userData = snapshot.val();

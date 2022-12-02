@@ -16,7 +16,8 @@ import Chats from "@/components/Chats";
 import appConfig from "../config";
 import imageswipeTestConfig from "../example.imageswipe-test.config";
 import wordswipeTestConfig from "../example.wordswipe-test.config";
-import { getDatabase, ref, child, get } from "firebase/database";
+import { ref, child, get } from "firebase/database";
+import { db } from "@/config/firebaseConfig";
 import { getAuth } from "firebase/auth";
 
 let config = appConfig;
@@ -137,12 +138,14 @@ router.beforeEach((to, from, next) => {
   const currentUser = auth.currentUser;
   const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
   const requiresAdmin = to.matched.some(record => record.meta.requiresAdmin);
-  const dbRef = ref(getDatabase());
+  const dbRef = ref(db);
   if (requiresAuth && !currentUser) {
     next({ path: "/login", query: from.query });
   } else if (to.name === "Play" && currentUser) {
+    console.log(dbRef); // debugging
     get(child(dbRef, `/users/${currentUser.uid}`)).then(snapshot => {
       const userData = snapshot.val();
+      console.log(userData); // debugging
       if (!userData.taken_tutorial && config.tutorial.needsTutorial) {
         next({ path: "/tutorial", query: from.query });
       } else next();

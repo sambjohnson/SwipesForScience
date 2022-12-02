@@ -1,10 +1,11 @@
 {
-  "name": "swipes-for-science",
+  "name": "lots",
   "version": "1.0.0",
   "private": true,
-  "author": "akeshavan <keshavan@berkeley.edu>",
+  "author": "Samuel Buck Johnson <samjohns@stanford.edu>",
   "scripts": {
     "serve": "vue-cli-service serve",
+    "serve-prod": "vue-cli-service serve --mode=production",
     "start-emulator:imageswipe": "firebase emulators:start --import=./firebase-emulator/fixtures/sample-imageswipe-test/saved-data",
     "start-emulator:wordswipe": "firebase emulators:start --import=./firebase-emulator/fixtures/sample-wordswipe-test/saved-data",
     "build": "vue-cli-service build",
