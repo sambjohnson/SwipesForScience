@@ -6,13 +6,13 @@ export default {
   // if new entries are there, they will be added, and entries that aren't in the manifest
   // but are in the firebase database will be *removed*
   manifestUrl:
-    "https://raw.githubusercontent.com/SwipesForScience/exampleConfig/master/bsHbnManifest.json",
+    "https://s3.us-west-2.amazonaws.com/cortex.rois.swipes4science/manifest.json",
   manifestType: "json",
   widgetType: "TimedImageSwipe",
   widgetUsesSecret: false,
   widgetProperties: {
     baseUrlTemplate:
-      "https://s3-us-west-2.amazonaws.com/akeshavan-mindcontrol/hbnSplat/{0}/tiles/base_{1}.png",
+      "https://s3.us-west-2.amazonaws.com/cortex.rois.swipes4science/{0}.png",
     delimiter: "__",
     leftSwipe: {
       label: "Fail",
@@ -23,7 +23,7 @@ export default {
       value: 1,
     },
     timing: {
-      stimulusDuration: 10_000,
+      stimulusDuration: null,
       timeoutValue: 0,
       interStimuliDuration: 2000,
       stimulusFadeIn: false,
@@ -278,12 +278,14 @@ export default {
 
   // this comes from your firebase console
   firebaseKeys: {
-    apiKey: "AIzaSyBLr1HyCf7tXGwnppkfjlIb6I0XSkJgybY",
-    authDomain: "swipesforsciencedev1.firebaseapp.com",
-    databaseURL: "https://swipesforsciencedev1.firebaseio.com",
-    projectId: "swipesforsciencedev1",
-    storageBucket: "swipesforsciencedev1.appspot.com",
-    messagingSenderId: "380364880642",
+    apiKey: "AIzaSyDbGxsrku7t_eg2G7r5xhof7_01GsxARDI",
+    authDomain: "cortex-rois.firebaseapp.com",
+    databaseURL: 'https://cortex-rois-default-rtdb.firebaseio.com',
+    projectId: "cortex-rois",
+    storageBucket: "cortex-rois.appspot.com",
+    messagingSenderId: "790877698525",
+    appId: "1:790877698525:web:81bf02364bf5e7e521de34",
+    measurementId: "G-1TK3MP1H1M"
   },
 
   app: {
