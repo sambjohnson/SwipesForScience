@@ -8,7 +8,7 @@
         :isNext="index === 1"
         :sampleId="sampleId"
         @removeTopCard="submitResponse"
-        :baseUrlTemplate="config.widgetProperties.sampleUrlTemplate"
+        :baseUrlTemplate="config.widgetProperties.baseUrlTemplate"
       />
     </div>
     <div class="imageswipe__instructions">

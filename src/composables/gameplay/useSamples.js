@@ -10,7 +10,7 @@ export default function useSamples() {
   });
 
   const getAllSamples = async () => {
-    await get(child(ref(db), "samples")).then(snapshot => {
+    await get(child(ref(db), "sampleSummary")).then(snapshot => {
       if (snapshot.exists()) {
         allSamples.value = snapshot.val();
       }

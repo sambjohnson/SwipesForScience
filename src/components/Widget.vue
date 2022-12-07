@@ -143,7 +143,7 @@ export default {
     };
     const updateSample = async ({ response, sampleId }) => {
       const newAverage = calculateNewAverage({ response, sampleId });
-      const sampleRef = ref(db, `samples/${sampleId}`);
+      const sampleRef = ref(db, `sampleSummary/${sampleId}`);
       const updates = {};
       updates.totalSeenCount = increment(1);
       updates.averageVote = newAverage;
