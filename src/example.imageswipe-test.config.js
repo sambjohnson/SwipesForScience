@@ -92,7 +92,7 @@ export default {
   widgetType: "ImageSwipe",
   widgetProperties: {
     question: "Is this a passing image?",
-    sampleUrlTemplate:
+    baseUrlTemplate:
       "https://imageswipe-test.s3.us-west-1.amazonaws.com/_SAMPLE_ID_.jpeg",
     leftSwipe: {
       label: "Swipe left for Fail",
