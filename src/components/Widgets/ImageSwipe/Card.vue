@@ -134,7 +134,7 @@ export default {
   },
   setup(props) {
     const imageUrl = computed(() => {
-      return props.baseUrlTemplate.replace("_SAMPLE_ID_", props.sampleId);
+      return props.baseUrlTemplate.replace("{0}", props.sampleId);
     });
     return { imageUrl };
   },

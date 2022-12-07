@@ -134,7 +134,7 @@ export default {
       });
     };
     const insertUsername = (username, uid) => {
-      return set(ref(getDatabase(), "usernames/" + username), uid);
+      return set(ref(getDatabase(), "users/" + username), uid);
     };
     const createAccount = async values => {
       const auth = getAuth();
@@ -165,7 +165,7 @@ export default {
     };
     const onSubmit = handleSubmit(values => {
       // check for a unique username
-      get(child(dbRef, `usernames/${values.username}`))
+      get(child(dbRef, `users/${values.username}`))
         .then(snapshot => {
           if (snapshot.exists()) {
             setFieldError(
