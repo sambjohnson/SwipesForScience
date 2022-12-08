@@ -46,7 +46,14 @@
       "slides": [
         {
           "title": "Introduction",
-          "text": "We have developed a convolutional neural network to define the occipitotemporal sulcus (OTS) on the cortical surface. Your job is to look at images and decide whether the network is accurate or not.",
+          "text": "We have developed a convolutional neural network to define the occipitotemporal sulcus (OTS) on the cortical surface. Your job is to look at images and decide whether the network is accurate or not. This is a good OTS; swipe right.",
+          "trainingCards": [
+            {
+              "sampleId": "y_sub-NDARAL897CYV",
+              "imageUrl": "",
+              "value": 1
+            }
+          ],
           "img": {
             "sampleId": "y_sub-NDARAL897CYV",
             "caption": "This is a good example. Swipe right!"
