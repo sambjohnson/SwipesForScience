@@ -46,11 +46,9 @@
       "slides": [
         {
           "title": "Introduction",
-          "text": "We have developed a convolutional neural network to define the occipital temporal sulcus (OTS) on the cortical surface.You job is to look at images and decide whether the network is accurate or not.",
-
+          "text": "We have developed a convolutional neural network to define the occipitotemporal sulcus (OTS) on the cortical surface. Your job is to look at images and decide whether the network is accurate or not.",
           "img": {
             "sampleId": "y_sub-NDARAL897CYV",
-            "url": "",
             "caption": "This is a good example. Swipe right!"
           }
         },
@@ -58,16 +56,15 @@
           "title": "Some predicted OTS's aren't as good. Swipe these to the left to flag them as incorrect.",
           "text": "This sample has labeled multiple parallel sulci in the OTS, including what looks to be part of the MFS. In other words, it's overeager to include territory in the medial direction.",
           "img": {
-            "sampleId": "y_sub-NDARAJ689BVN",
-            "url": "",
+            "sampleId": "y_sub-NDARAJ689BV",
             "caption": "This is a bad example. Swipe left!"
           }
         }
       ]
     },
     "left": {
-      "title": "Here is a title",
-      "text": "Here is text",
+      "title": "Another good example",
+      "text": "",
       "card": {
         "img": {
           "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Humpback_whales_in_singing_position.jpg"
@@ -75,8 +72,8 @@
       }
     },
     "right": {
-      "title": "Here is a title",
-      "text": "Here is text",
+      "title": "Another bad example",
+      "text": "",
       "card": {
         "img": {
           "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Humpback_whales_in_singing_position.jpg"
@@ -84,8 +81,8 @@
       }
     },
     "training": {
-      "title": "Here is a training title",
-      "text": "Here is training text",
+      "title": "Here are some training examples",
+      "text": "Swipe left if you think the OTS is incorrect.",
       "trainingCards": [
         {
           "sampleId": "y_sub-NDARMT882AWE",
@@ -101,7 +98,7 @@
     },
     "summary": {
       "title": "Tutorial Complete!",
-      "text": "You're ready to start QCing OTS's. Good luck!"
+      "text": "You're ready to start QCing some OTS's. Good luck!"
     }
   }
 }
