@@ -119,8 +119,8 @@ export default {
   width: 80%;
   margin-bottom: 80%;
   @include media("≥tablet") {
-    width: 65%;
-    margin-bottom: calc(65% + space(3));
+    width: 95%;
+    margin-bottom: calc(95% + space(3));
   }
 }
 .imageswipe__question {
