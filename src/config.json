@@ -46,7 +46,7 @@
       "slides": [
         {
           "title": "Introduction",
-          "text": "We have developed a convolutional neural network to define the occipital temporal sulcus (OTS) on the cortical surface.You job is to look at images and decide whether the network is accurate or not."
+          "text": "We have developed a convolutional neural network to define the occipital temporal sulcus (OTS) on the cortical surface.You job is to look at images and decide whether the network is accurate or not.",
 
           "img": {
             "sampleId": "y_sub-NDARAL897CYV",
@@ -93,7 +93,7 @@
           "value": 1
         },
         {
-          "sampleId": "x_sub-NDARRF525ME3",
+          "sampleId": "y_sub-NDARRF525ME3",
           "imageUrl": "",
           "value": 0
         }
