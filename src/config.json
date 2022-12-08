@@ -45,19 +45,22 @@
     "introduction": {
       "slides": [
         {
-          "title": "Here is a title",
-          "text": "here is an example tutorial step",
+          "title": "Introduction",
+          "text": "We have developed a convolutional neural network to define the occipital temporal sulcus (OTS) on the cortical surface.You job is to look at images and decide whether the network is accurate or not."
+
           "img": {
-            "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Humpback_whales_in_singing_position.jpg",
-            "caption": "Here is a caption"
+            "sampleId": "y_sub-NDARAL897CYV",
+            "url": "",
+            "caption": "This is a good example. Swipe right!"
           }
         },
         {
-          "title": "Here is another title",
-          "text": "here is another one.",
+          "title": "Some predicted OTS's aren't as good. Swipe these to the left to flag them as incorrect.",
+          "text": "This sample has labeled multiple parallel sulci in the OTS, including what looks to be part of the MFS. In other words, it's overeager to include territory in the medial direction.",
           "img": {
-            "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Hydrophone_being_lowered_into_the_Atlantic.jpg",
-            "caption": "Here is another caption"
+            "sampleId": "y_sub-NDARAJ689BVN",
+            "url": "",
+            "caption": "This is a bad example. Swipe left!"
           }
         }
       ]
@@ -97,8 +100,8 @@
       ]
     },
     "summary": {
-      "title": "This is a summary title",
-      "text": "This is summary text"
+      "title": "Tutorial Complete!",
+      "text": "You're ready to start QCing OTS's. Good luck!"
     }
   }
 }
