@@ -48,7 +48,6 @@
           "title": "Introduction",
           "text": "We have developed a convolutional neural network to define the occipitotemporal sulcus (OTS) on the cortical surface. Your job is to look at images and decide whether the network is accurate or not.",
           "img": {
-            "sampleId": "y_sub-NDARAL897CYV",
             "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAL897CYV.png?raw=true",
             "caption": "This is a good example. Swipe right!"
           }
@@ -57,7 +56,6 @@
           "title": "Some predicted OTS's aren't as good. Swipe these to the left to flag them as incorrect.",
           "text": "This sample has labeled multiple parallel sulci in the OTS, including what looks to be part of the MFS. In other words, it's overeager to include territory in the medial direction.",
           "img": {
-            "sampleId": "y_sub-NDARAJ689BV",
             "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAJ689BV.png?raw=true",
             "caption": "This is a bad example. Swipe left!"
           }
