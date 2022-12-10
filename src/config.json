@@ -53,7 +53,7 @@
         }
       ]
     },
-    "left": {
+    "right": {
       "title": "A good example",
       "text": "",
       "card": {
@@ -62,13 +62,12 @@
         }
       }
     },
-    "right": {
+    "left": {
       "title": "A bad example",
       "text": "",
       "card": {
         "img": {
-          "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAJ689BV.png?raw=true",
-          "caption": "This sample has labeled multiple parallel sulci in the OTS, including what looks to be part of the MFS. In other words, it's overeager to include territory in the medial direction."
+          "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAJ689BV.png?raw=true"
         }
       }
     },
