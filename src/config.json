@@ -67,7 +67,25 @@
       "text": "",
       "card": {
         "img": {
-          "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAJ689BV.png?raw=true"
+          "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAJ689BVN.png?raw=true"
+        }
+      }
+    },
+    "right": {
+      "title": "Another good example",
+      "text": "",
+      "card": {
+        "img": {
+          "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAJ977PRJ.png?raw=true"
+        }
+      }
+    },
+    "left": {
+      "title": "Another bad example",
+      "text": "",
+      "card": {
+        "img": {
+          "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAE199TDD.png?raw=true"
         }
       }
     },
