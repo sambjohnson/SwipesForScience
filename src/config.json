@@ -50,20 +50,6 @@
           "img": {
             "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAL897CYV.png?raw=true"
           }
-        },
-        {
-          "title": "",
-          "text": "Sometimes the network gets fairly close.",
-          "img": {
-            "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAC853CR6.png?raw=true"
-          }
-        },
-        {
-          "title": "A bad example",
-          "text": "Other times, there are larger mistakes.",
-          "img": {
-            "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAJ689BVN.png?raw=true"
-          }
         }
       ]
     },
@@ -77,11 +63,29 @@
       }
     },
     "left": {
-      "title": "Another bad example; swipe these to the left.",
+      "title": "A bad example; swipe these to the left.",
       "text": "",
       "card": {
         "img": {
           "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAE199TDD.png?raw=true"
+        }
+      }
+    },
+    "right2": {
+      "title": "Another good example",
+      "text": "Sometimes the network gets fairly close.",
+      "card": {
+        "img": {
+          "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAC853CR6.png?raw=true"
+        }
+      }
+    },
+    "left2": {
+      "title": "Another bad example",
+      "text": "Other times, there are larger mistakes.",
+      "card": {
+        "img": {
+          "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAJ689BVN.png?raw=true"
         }
       }
     },

@@ -34,6 +34,26 @@
       />
     </div>
     <div v-if="currentStep === 3">
+      <TutorialCard
+        :title="config.tutorial.right2.title"
+        :text="config.tutorial.right2.text"
+        :card="config.tutorial.right2.card"
+        :value="1"
+        :widgetType="config.widgetType"
+        @nextStep="nextStep"
+      />
+    </div>
+    <div v-if="currentStep === 4">
+      <TutorialCard
+        :title="config.tutorial.left2.title"
+        :text="config.tutorial.left2.text"
+        :card="config.tutorial.left2.card"
+        :value="0"
+        :widgetType="config.widgetType"
+        @nextStep="nextStep"
+      />
+    </div>
+    <div v-if="currentStep === 5">
       <WordSwipeTraining
         v-if="config.widgetType === 'WordSwipe'"
         :title="config.tutorial.training.title"
@@ -53,7 +73,7 @@
         @trainingCompleted="trainingCompleted"
       />
     </div>
-    <div v-if="currentStep === 4">
+    <div v-if="currentStep === 6">
       <h2 class="subheading">{{ config.tutorial.summary.title }}</h2>
       <p class="tutorial-instructions mb-3">
         {{ config.tutorial.summary.text }}
