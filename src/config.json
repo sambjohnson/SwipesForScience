@@ -50,29 +50,29 @@
           "img": {
             "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAL897CYV.png?raw=true"
           }
+        },
+        {
+          "title": "A good example",
+          "text": "Sometimes the network gets fairly close.",
+          "card": {
+            "img": {
+              "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAL897CYV.png?raw=true"
+            }
+          }
+        },
+        {
+          "title": "A bad example",
+          "text": "Other times, there are larger mistakes.",
+          "card": {
+            "img": {
+              "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAJ689BVN.png?raw=true"
+            }
+          }
         }
       ]
     },
     "right": {
-      "title": "A good example",
-      "text": "",
-      "card": {
-        "img": {
-          "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAL897CYV.png?raw=true"
-        }
-      }
-    },
-    "left": {
-      "title": "A bad example",
-      "text": "",
-      "card": {
-        "img": {
-          "url": "https://github.com/sambjohnson/SwipesForScience/blob/main/src/assets/swipes-examples/y_sub-NDARAJ689BVN.png?raw=true"
-        }
-      }
-    },
-    "right": {
-      "title": "Another good example",
+      "title": "Another good example; swipe these to the right.",
       "text": "",
       "card": {
         "img": {
@@ -81,7 +81,7 @@
       }
     },
     "left": {
-      "title": "Another bad example",
+      "title": "Another bad example; swipe these to the left.",
       "text": "",
       "card": {
         "img": {
