@@ -2,7 +2,7 @@
   "needsTutorial": true,
   "manifestUrl": "https://s3.us-west-2.amazonaws.com/cortex.rois.swipes4science/manifest.json",
   "manifestType": "json",
-  "widgetType": "ImageSwipe",
+  "widgetType": "ImageDraw",
   "widgetProperties": {
     "baseUrlTemplate": "https://s3.us-west-2.amazonaws.com/cortex.rois.swipes4science/{0}.png",
     "delimiter": "__",

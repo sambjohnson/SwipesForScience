@@ -25,6 +25,15 @@
         :displayedSamples="displayedSamples"
         @submitVote="submitVote"
       />
+      <ImageDraw
+        v-if="config.widgetType === 'ImageDraw'"
+        :config="config"
+        :currentGame="currentGame"
+        :currentGameId="currentGameId"
+        :allSamples="allSamples"
+        :displayedSamples="displayedSamples"
+        @submitVote="submitVote"
+      />
     </div>
     <div v-if="gameState === GAME_STATES.GAME_OVER" class="widget__game-over">
       Game Completed! You scored
@@ -58,6 +67,7 @@ import useVote from "@/composables/gameplay/useVote";
 import useCurrentGame from "@/composables/gameplay/useCurrentGame";
 import WordSwipe from "@/components/Widgets/WordSwipe/WordSwipe.vue";
 import ImageSwipe from "@/components/Widgets/ImageSwipe/ImageSwipe.vue";
+import ImageDraw from "@/components/Widgets/ImageDraw/ImageDraw.vue";
 import WidgetHeader from "@/components/Widgets/WidgetHeader";
 import PauseScreen from "@/components/PauseScreen";
 
@@ -71,7 +81,7 @@ import {
 import { onMounted, toRaw, watch, computed, ref as vueRef } from "vue";
 
 export default {
-  components: { WidgetHeader, WordSwipe, ImageSwipe, PauseScreen },
+  components: { WidgetHeader, WordSwipe, ImageSwipe, ImageDraw, PauseScreen },
   props: {
     config: {
       type: Object,
