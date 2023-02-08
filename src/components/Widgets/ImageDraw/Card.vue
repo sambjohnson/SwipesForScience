@@ -13,8 +13,6 @@
     <canvas
       id="paper-canvas"
       v-on:mousedown="onMouseDown"
-      v-on:mouseup="onMouseUp"
-      v-on:mousedrag="onMouseDrag"
       v-on:keydown="onKeyDown"
     ></canvas>
     <img :src="imageUrl" class="draw-card__image" />
@@ -51,38 +49,46 @@ export default {
       allPaths: [],
       erase: false,
       scope: null,
+      tool: null,
     };
   },
   mounted() {
     this.scope = new paper.PaperScope();
     this.scope.setup("paper-canvas");
+    this.scope.activate();
   },
-  beforeUnmount() {},
   methods: {
-    onMouseDown(event) {
-      // If we produced a path before, deselect it:
-      if (this.currentPath) {
-        this.currentPath.selected = false;
-      }
-
-      // Create a new path and set its stroke color to black:
-      this.currentPath = new paper.Path({
-        segments: [event.point],
+    pathCreate(scope) {
+      scope.activate();
+      return new paper.Path({
         strokeColor: "black",
+        strokeJoin: "round",
+        strokeWidth: 1.5,
         // Select the path, so we can see its segment points:
         fullySelected: true,
       });
     },
-    onMouseDrag(event) {
-      this.currentPath.add(event.point);
+    createTool(scope) {
+      scope.activate();
+      return new paper.Tool();
     },
-    // When the mouse is released, we simplify the path:
-    onMouseUp() {
-      // When the mouse is released, simplify it:
-      this.currentPath.closed = true;
-      // TODO: Verify that this is a good tolerance for simplify
-      this.currentPath.simplify(10);
-      this.allPaths.push(this.currentPath);
+    onMouseDown() {
+      console.log("in onMouseDown");
+      let self = this;
+      this.tool = this.createTool(this.scope);
+      this.tool.onMouseDown = event => {
+        self.currentPath = this.pathCreate(self.scope);
+        self.currentPath.add(event.point);
+      };
+      this.tool.onMouseDrag = event => {
+        self.currentPath.add(event.point);
+      };
+      this.tool.onMouseUp = () => {
+        self.currentPath.closed = true;
+        // TODO: Verify that this is a good tolerance for simplify
+        self.currentPath.simplify(10);
+        self.allPaths.push(self.currentPath);
+      };
     },
     onKeyDown(event) {
       if (event.key == "space") {
@@ -124,17 +130,21 @@ export default {
   user-select: none;
   touch-action: none;
   width: 100%;
+
   @include media("≥tablet") {
     width: 100%;
   }
 }
+
 .draw-card__image {
   border-radius: $border-radius-sm;
   width: 100%;
+
   @include media("≥tablet") {
     min-width: 100%;
   }
 }
+
 .draw-card--current {
   cursor: move;
   transform: scale(1);
@@ -142,17 +152,21 @@ export default {
   touch-action: none;
   z-index: 2;
 }
+
 .draw-card--disabled {
   transform: scale(0.9) translatey(30px);
   opacity: 0;
   pointer-events: none;
 }
+
 .draw-card--next {
   opacity: 0.7;
 }
+
 .isAnimating {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in;
 }
+
 #paper-canvas {
   width: 100% !important;
   height: 500px !important;
